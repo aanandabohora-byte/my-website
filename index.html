@@ -144,21 +144,35 @@
         </div>
       </section>
 
-      <section class="card" id="contact">
-        <h2>Let’s connect</h2>
-        <p class="muted-intro">Interested in retail operations, staff training, business improvement, or digital projects? Send a message draft below.</p>
-        <form id="contactForm" novalidate>
-          <label for="name">Name <input id="name" type="text" name="name" autocomplete="name" required></label>
-          <label for="email">Email <input id="email" type="email" name="email" autocomplete="email" required></label>
-          <label for="message">Message <textarea id="message" name="message" rows="4" required></textarea></label>
-          <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
-          <button class="btn primary" type="submit">Prepare message</button>
-        </form>
-        <p class="privacy-note">This portfolio form currently validates your details in the browser. It needs an email or form-service integration to deliver messages.</p>
-      </section>
-      <footer>© <span id="year"></span> Ananda Bohora · Built around people, operations, and practical technology.</footer>
-    </main>
-  </div>
-  <script src="script.js"></script>
-</body>
+     <section class="card" id="contact"> 
+  <h2>Let’s connect</h2> 
+  <p class="muted-intro">Interested in retail operations, staff training, business improvement, or digital projects? Send a message draft below.</p> 
+  
+  <!-- Updated form action and method to route to Formspree -->
+  <form id="contactForm" action="https://formspree.io" method="POST"> 
+    <label for="name">Name 
+      <input id="name" type="text" name="name" autocomplete="name" required>
+    </label> 
+    
+    <label for="email">Email 
+      <input id="email" type="email" name="_replyto" autocomplete="email" required>
+    </label> 
+    
+    <label for="message">Message 
+      <textarea id="message" name="message" rows="4" required></textarea>
+    </label> 
+    
+    <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p> 
+    <button class="btn primary" type="submit">Send Message</button> 
+  </form> 
+  
+  <p class="privacy-note">Messages sent through this form will be delivered straight to Ananda's inbox.</p> 
+</section> 
+
+<footer>© <span id="year"></span> Ananda Bohora · Built around people, operations, and practical technology.</footer> 
+</main> 
+</div> 
+<script src="script.js"></script> 
+</body> 
 </html>
+
